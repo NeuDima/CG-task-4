@@ -1,7 +1,5 @@
 package com.cgvsu;
 
-import com.cgvsu.model.Triangulate;
-import com.cgvsu.model.TriangulateModel;
 import com.cgvsu.render_engine.RenderEngine;
 import javafx.fxml.FXML;
 import javafx.animation.Animation;
@@ -82,8 +80,6 @@ public class GuiController {
         try {
             String fileContent = Files.readString(fileName);
             mesh = ObjReader.read(fileContent);
-            TriangulateModel TModel = Triangulate.triangulate(mesh);
-            mesh.setModel(TModel);
             // todo: обработка ошибок
         } catch (IOException exception) {
 

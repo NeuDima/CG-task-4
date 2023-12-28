@@ -7,5 +7,10 @@ public class Vector2f {
         this.y = y;
     }
 
+    public boolean equals(Vector2f other) {
+        return Math.abs(x - other.x) < eps && Math.abs(y - other.y) < eps;
+    }
+
+    final float eps = 1e-7f;
     public float x, y;
 }
